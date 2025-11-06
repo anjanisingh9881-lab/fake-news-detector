@@ -19,6 +19,7 @@ def preprocess_text(text):
 
 # ✅ Load Trained Model
 model = joblib.load("fake_news_model.joblib")
+
 vectorizer = joblib.load("tfidf_vectorizer.joblib")
 
 # ✅ UI
