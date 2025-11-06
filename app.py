@@ -27,9 +27,22 @@ st.write("Enter any news headline or article below:")
 
 news = st.text_area("Paste news text here:")
 
-if st.button("Check"):
     if st.button("Check"):
     if news.strip() == "":
+        st.warning("Please enter some news text.")
+    else:
+        processed = preprocess_text(news)
+        vectorized = vectorizer.transform([processed])
+        prediction = model.predict(vectorized)[0]
+
+        # Debug line
+        st.write("Raw prediction:", prediction)
+
+        if prediction == 1:
+            st.success("✅ This news appears REAL ✅")
+        else:
+            st.error("❌ This news appears FAKE ❌")
+
         st.warning("Please enter some news text.")
     else:
         processed = preprocess_text(news)
