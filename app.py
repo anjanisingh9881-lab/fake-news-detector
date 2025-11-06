@@ -35,12 +35,10 @@ if st.button("Check"):
         vectorized = vectorizer.transform([processed])
         prediction = model.predict(vectorized)[0]
 
-        st.write("Raw prediction:", prediction)
-
-
-        if prediction == 1:
-            st.error("🚨 This news appears **FAKE** ❌")
-        else:
-            st.success("✅ This news appears **REAL** 🟢")
+        
+       if prediction == 1:
+    st.success("✅ This news appears *REAL* ✅")
+else:
+    st.error("❌ This news appears *FAKE* ❌")
 
 st.caption("Developed by Anjani Singh | Fake News Detection Project")
