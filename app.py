@@ -37,6 +37,11 @@ if st.button("Check"):
         prediction = model.predict(vectorized)[0]
 
         prediction = 1 - prediction
+        # Quick fix for model bias
+if prediction == 0:
+    if len(news.split()) > 12:  # If news has more than 12 words, assume real
+        prediction = 1
+
 
 
         # Debug line
