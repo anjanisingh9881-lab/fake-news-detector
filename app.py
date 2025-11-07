@@ -22,7 +22,7 @@ def preprocess_text(text):
 model = joblib.load("fake_news_model.joblib")
 
 vectorizer = joblib.load("tfidf_vectorizer.joblib")
- ✅ UI
+ 
 st.set_page_config(page_title="Fake News Detector")
 
 st.title("📰 Fake News Detection AI")
