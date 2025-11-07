@@ -14,7 +14,7 @@ def preprocess_text(text):
     text = re.sub('[^a-zA-Z]', ' ', text)
     text = text.lower()
     words = text.split()
-    words = [ps.stem(word) for word in words if word not in stop_words]
+    words = [ps.stem(word) forword in words if word not in stop_words]
     return " ".join(words)
 
 # ✅ Load Trained Model
