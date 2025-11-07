@@ -10,6 +10,7 @@ ps = PorterStemmer()
 stop_words = set(stopwords.words("english"))
 
 # ✅ Preprocess Function
+
 def preprocess_text(text):
     text = re.sub('[^a-zA-Z]', ' ', text)
     text = text.lower()
