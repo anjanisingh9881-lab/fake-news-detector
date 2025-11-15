@@ -49,7 +49,7 @@ if st.button("Check"):
 
         st.write("Raw prediction:", prediction)
 
-        if prediction == 1:
-            st.success(" This news appears fake  ")
+        if prediction == 0:
+            st.success(" This news appears real  ")
         else:
-            st.error(" This news appears real ")
+            st.error(" This news appears fake ")
